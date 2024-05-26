@@ -56,7 +56,7 @@ public class MLDecisionTreeImpl implements MLDecisionTreeInt {
 		final Map<String, List<Map<String, String>>> partitionsFromBestAttribute = partitionerInt.partitionData(data,
 				bestAttribute);
 
-		LOGGER.info(String.format(" partitions based on targetAttribute  %s=%s ", bestAttribute,
+		LOGGER.info(String.format(" partitions based on bestAttribute  %s=%s ", bestAttribute,
 				partitionsFromBestAttribute));
 
 		// For each value of the best attribute, create a subtree recursively with
