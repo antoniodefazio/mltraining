@@ -65,13 +65,14 @@ ID3's philosophy is that shorter trees are preferred on longer trees, and which 
 ### Which Attribute Is the Best Classifier?
 
 The best attribute as root is obviously the one that has the greatest impact, therefore high correlation, with the target attribute, so it is the best __"separator"__(during split) of training data. What is a good quantitative measure of the worth of an attribute? A statistical property, called __information gain__, that measures how well a given attribute separates the training examples according to their target classification. ID3 uses this information gain measure to select among the candidate attributes at each step while growing the tree.
-So in order to better understand how to establish the best attribute during split we have to understand the concepts of information gain and __entropy__ precisely. 
-We begin by defining a measure commonly used in information theory, called entropy,its name comes from one of the fathers of information theory, Claude Shannon. I had studied this formula at University for the "Theory of Waves" exam. Legend has it that the terms information gain and entropy are purposely designed to cause confusion! In fact it was John von Neumann suggested that Shannon use the term entropy because people wouldn't know what it meant.
+So in order to better understand how to establish the best attribute during split we have to understand the concepts of information gain and __entropy__ precisely. We in fact begin by defining a measure commonly used in information theory, called entropy, its name comes from one of the fathers of information theory, Claude Shannon. I had studied this formula at University for the "Theory of Waves" exam. 
+
+_Legend has it that the terms information gain and entropy are purposely designed to cause confusion! In fact it was John von Neumann suggested that Shannon use the term entropy because people wouldn't know what it meant. Claude Shannon is considered one of the most intelligent people of the twentieth century.
+It was said of Claude Shannon:“There were many at Bell Labs and MIT who compared Shannon's intuition to that of Einstein. Others found that comparison unfair, unfair to Shannon”..._
 
 Entropy is defined as the __expected value of information__.
 
-_Claude Shannon is considered one of the most intelligent people of the twentieth century.
-It was said of Claude Shannon:“There were many at Bell Labs and MIT who compared Shannon's intuition to that of Einstein. Others found that comparison unfair, unfair to Shannon”..._
+
 
 In ML context Entropy is the expected value of the information __relating to the classes__. 
 
