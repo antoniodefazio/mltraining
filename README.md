@@ -31,12 +31,12 @@ Parameter 1: __examples__, the training examples.
 Parameter 2: __targetattribute__, the attribute whose value is to be predicted by the tree. 
 Parameter 3: __attributes__, a list of other attributes that may be tested by the learned decision tree. 
 
-If all examples are of the same class, return a single-node tree Root, with label = class
+ If all examples are of the same class, return a single-node tree Root, with label = class
 
-If attributes is empty, Return a single-node tree Root, with label = most common value of
-targetattribute in examples
+ If attributes is empty, Return a single-node tree Root, with label = most common value of
+ targetattribute in examples
 
-Otherwise
+ Otherwise
 
     Let A the attribute from atttributes that best classifies examples
 
@@ -51,8 +51,8 @@ Otherwise
             then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
 
             else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
-End Otherwise
-Return the  Root decision node
+ End Otherwise
+ Return the  Root decision node
 
 ID3's philosophy is that shorter trees are preferred on longer trees, and which places relevant information close to the root are preferred over, therefore the algorithm always tries to put the attributes that have the greatest correlation with the target attribute at the top.
 
