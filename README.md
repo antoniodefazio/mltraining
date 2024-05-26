@@ -90,6 +90,10 @@ _Gain(S,A) = E(S) – E(S | A)_
 
 where E(S) is the above entropy before split, while E(S|A) is the entropy given A, means the entropy after splitting based on A.
 
+Fill Java code for Entropy and Infomration Gain at https://github.com/antoniodefazio/mltraining/blob/master/src/mltraining/algorithms/ID3.java
+
+The part relating to choosing the best attribute during the split phase can be changed as I use a Java Lambda Function.
+
 In the main method the tree for the classic example of the tennis match is generated.
 
 # BANK LOAN
