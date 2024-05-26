@@ -39,7 +39,7 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
      If attributes is empty, Return a single-node tree Root, with label = most common value of
      targetattribute in examples
 
- Otherwise
+     Otherwise
 
     Let A the attribute from atttributes that best classifies examples
 
