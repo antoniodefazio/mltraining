@@ -37,7 +37,7 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
      If all __examples__ are of the same class, return a single-node tree Root, with label = class
 
      If __attributes__ is empty, Return a single-node tree Root, with label = most common value of
-     targetattribute in examples
+     __targetattribute__ in __examples__
 
 
     Let A the attribute from __attributes__ that best classifies examples
