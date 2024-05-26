@@ -126,4 +126,6 @@ _delinq.2yrs_: The number of times the borrower had been 30+ days past due on a 
 
 _pub.rec_: The borrower’s number of derogatory public records (bankruptcy filings, tax liens, or judgments).
 
+Obviously I discretized the "continuous" variables in my own way, creating arbitrary ranges.
+
 I really like to represent the tree with "my" ToString, test it locally!!
