@@ -38,8 +38,8 @@ Otherwise
     Let A the attribute from atttributes that best classifies examples
     Create a Root decision node which attribute is A
     For each possible value, vi, of A,
-&nbsp;&nbsp;Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of examples that have value vi for A(partition)
-&nbsp;&nbsp;If examples is empty 
+        Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of examples that have value vi for A(partition)
+        If examples is empty 
 &nbsp;&nbsp;&nbsp;then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
 &nbsp;&nbsp;&nbsp;else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
 End Otherwise
