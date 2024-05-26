@@ -45,9 +45,12 @@ Otherwise
     For each possible value, vi, of A,
 
         Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of examples that have value vi for A(partition)
-        If examples is empty 
-&nbsp;&nbsp;&nbsp;then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
-&nbsp;&nbsp;&nbsp;else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
+
+        If examples is empty
+
+            then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
+
+            else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
 End Otherwise
 Return the  Root decision node
 
