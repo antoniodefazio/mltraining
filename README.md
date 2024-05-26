@@ -5,7 +5,7 @@ The decision tree can be considered not only an alternative and clearer view of 
 The project I propose in the article shows the algorithm for generating the decision tree based on the training data.
 The program aims to generate the classifier for any set of attributes and data, therefore it generates an n-ary decision tree for a target attribute that can have n labels.
 
-The example considered in the main method is the classic one of the tennis match which is played based on some weather conditions, which decision tree is: 
+The example considered in the main method( class https://github.com/antoniodefazio/mltraining/blob/master/src/mltraining/inductive/LearningProblem.java) is the classic one of the tennis match which is played based on some weather conditions, which decision tree is: 
 
 ![tree](https://github.com/antoniodefazio/mltraining/assets/61966052/947cfefa-04eb-46d6-b4b4-c5f743c6c98b)
 
@@ -94,11 +94,11 @@ Fill Java code for Entropy and Infomration Gain at https://github.com/antoniodef
 
 The part relating to choosing the best attribute during the split phase can be changed as I use a Java Lambda Function.
 
-In the main method the tree for the classic example of the tennis match is generated.
+In the main method( class https://github.com/antoniodefazio/mltraining/blob/master/src/mltraining/inductive/LearningProblem.java ) the tree for the classic example of the tennis match is generated.
 
 # BANK LOAN
 
-The final part of the main method is very interesting because the decision tree for a bank loan is generated on the basis of the csv indicating the data relating to whether the bank loan has been paid in full or not. In fact, the data contains the target attribute __“not.fully.paid”__ which classifies all the examples of the csv. The other variables meaning is:
+The final part of the main method( class https://github.com/antoniodefazio/mltraining/blob/master/src/mltraining/inductive/LearningProblem.java)  is very interesting because the decision tree for a bank loan is generated on the basis of the csv indicating the data relating to whether the bank loan has been paid in full or not. In fact, the data contains the target attribute __“not.fully.paid”__ which classifies all the examples of the csv. The other variables meaning is:
 
 _credit.policy_: 1 if the customer meets the credit underwriting criteria of LendingClub.com , and 0 otherwise.
 
