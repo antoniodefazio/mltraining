@@ -16,7 +16,9 @@ The tree is therefore based on existing data, so built by training from the data
 _(Outlook = Sunny, Temperature = Hot, Humidity = High, Wind = Strong)_
  would be classified as a negative instance (i.e., the tree predicts that PlayTennis = no).
 This decision tree, since the range of the target attribute is binary (Yes or No), it can alternatively be represented by the following boolean expression
+
 _Outlook = Sunny AND Humidity = Normal OR Outlook = Overcast OR Outlook = Rain  AND Wind = Weak_
+
 
 ### In general, how to build the tree starting from the training data?
 
