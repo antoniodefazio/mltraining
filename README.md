@@ -35,9 +35,9 @@ If all examples are of the same class, return a single-node tree Root, with labe
 If attributes is empty, Return a single-node tree Root, with label = most common value of
 targetattribute in examples
 Otherwise
-&nbsp;Let A the attribute from atttributes that best classifies examples
-&nbsp;Create a Root decision node which attribute is A
-&nbsp;For each possible value, vi, of A,
+    Let A the attribute from atttributes that best classifies examples
+    Create a Root decision node which attribute is A
+    For each possible value, vi, of A,
 &nbsp;&nbsp;Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of examples that have value vi for A(partition)
 &nbsp;&nbsp;If examples is empty 
 &nbsp;&nbsp;&nbsp;then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
