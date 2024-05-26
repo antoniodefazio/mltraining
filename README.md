@@ -22,7 +22,7 @@ _Outlook = Sunny AND Humidity = Normal OR Outlook = Overcast OR Outlook = Rain  
 
 ### In general, how to build the tree starting from the training data?
 
-We will use the ID3 algorithm first by making a discursive description of it, then pseudocode and finally in Java.
+We will use the ID3 algorithm first by making a discursive description of it, then pseudocode and finally in Java. This is the wiki link https://en.wikipedia.org/wiki/ID3_algorithm. 
  
 The most important part of the algorithm is to establish on a statistical basis which is the __best attribute__ to use as the root of the tree, for obvious reasons, later a descendant of the root node is then created for each possible value of this attribute, and so on recursively, so the entire process is then repeated using the training examples associated with each descendant node to select the best attribute to test at that point in the tree.
 
