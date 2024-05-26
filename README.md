@@ -56,6 +56,8 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
             
      Return the Root decision node
 
+Full Java code of ID3 at https://github.com/antoniodefazio/mltraining/blob/master/src/mltraining/domain/datastructures/MLDecisionTreeImpl.java method _buildTree_
+
 ID3's philosophy is that shorter trees are preferred on longer trees, and which places relevant information close to the root are preferred over, therefore the algorithm always tries to put the attributes that have the greatest correlation with the target attribute at the top.
 
 ## Which Attribute Is the Best Classifier?
