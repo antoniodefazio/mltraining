@@ -26,15 +26,18 @@ The most important part of the algorithm is to establish on a statistical basis 
 
 Here is my starting point, the pseudcode function, with 3 parameters, to generate the tree(pay attention to indentation):
 
-ID3(examples, targetattribute, attributes) 
-Parameter 1: __examples__, the training examples. 
-Parameter 2: __targetattribute__, the attribute whose value is to be predicted by the tree. 
-Parameter 3: __attributes__, a list of other attributes that may be tested by the learned decision tree. 
+    ID3(examples, targetattribute, attributes)
+    
+    Parameter 1: __examples__, the training examples.
+    
+    Parameter 2: __targetattribute__, the attribute whose value is to be predicted by the tree.
+    
+    Parameter 3: __attributes__, a list of other attributes that may be tested by the learned decision tree. 
 
- If all examples are of the same class, return a single-node tree Root, with label = class
+     If all examples are of the same class, return a single-node tree Root, with label = class
 
- If attributes is empty, Return a single-node tree Root, with label = most common value of
- targetattribute in examples
+     If attributes is empty, Return a single-node tree Root, with label = most common value of
+     targetattribute in examples
 
  Otherwise
 
