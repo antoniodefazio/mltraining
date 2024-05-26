@@ -54,8 +54,8 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
             then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
 
             else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
- End Otherwise
- Return the  Root decision node
+     End Otherwise
+     Return the  Root decision node
 
 ID3's philosophy is that shorter trees are preferred on longer trees, and which places relevant information close to the root are preferred over, therefore the algorithm always tries to put the attributes that have the greatest correlation with the target attribute at the top.
 
