@@ -11,14 +11,12 @@ The example considered in the main method( class https://github.com/antoniodefaz
 
 The tree is therefore based on existing data, so built by training from the data, and can also predict, and classify a tuple of data such as the following:
 
-_*(Outlook = Sunny, Temperature = Hot, Humidity = High, Wind = Strong)*_
+_(Outlook = Sunny, Temperature = Hot, Humidity = High, Wind = Strong)_
  would be classified as a negative instance (i.e., the tree predicts that PlayTennis = no).
 This decision tree, since the range of the target attribute is binary (Yes or No), it can alternatively be represented by the following boolean expression
-Outlook = Sunny AND Humidity = Normal
-OR Outlook = Overcast
-OR Outlook = Rain  AND Wind = Weak
+_Outlook = Sunny AND Humidity = Normal OR Outlook = Overcast OR Outlook = Rain  AND Wind = Weak_
 
-### But how to build the tree starting from the training data?
+### In general, how to build the tree starting from the training data?
 
 We will use the ID3 algorithm first by making a discursive description of it, then pseudocode and finally in Java.
  
