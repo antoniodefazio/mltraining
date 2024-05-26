@@ -1,4 +1,6 @@
-# DECISION TREE REPRESENTATION
+#How to create from scratch a Machine Learning Decisional Tree in Java from training data. Concrete example of bank loan payment forecast
+
+### Decision Tree Representation
 
 The decision tree can be considered not only an alternative and clearer view of the data, but also a useful classification tool and possibly prediction of the class of a data item.
 
@@ -58,7 +60,7 @@ Full Java code of ID3 at https://github.com/antoniodefazio/mltraining/blob/maste
 
 ID3's philosophy is that shorter trees are preferred on longer trees, and which places relevant information close to the root are preferred over, therefore the algorithm always tries to put the attributes that have the greatest correlation with the target attribute at the top.
 
-## Which Attribute Is the Best Classifier?
+### Which Attribute Is the Best Classifier?
 
 The best attribute as root is obviously the one that has the greatest impact, therefore high correlation, with the target attribute, so it is the best __"separator"__(during split) of training data. What is a good quantitative measure of the worth of an attribute? A statistical property, called __information gain__, that measures how well a given attribute separates the training examples according to their target classification. ID3 uses this information gain measure to select among the candidate attributes at each step while growing the tree.
 So in order to better understand how to establish the best attribute during split we have to understand the concepts of information gain and __entropy__ precisely. 
