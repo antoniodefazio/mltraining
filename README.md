@@ -34,27 +34,27 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
     
     Parameter 3: __attributes__, a list of other attributes that may be tested by the learned decision tree. 
 
-     If all examples are of the same class, return a single-node tree Root, with label = class
+     If all __examples__ are of the same class, return a single-node tree Root, with label = class
 
-     If attributes is empty, Return a single-node tree Root, with label = most common value of
+     If __attributes__ is empty, Return a single-node tree Root, with label = most common value of
      targetattribute in examples
 
 
-    Let A the attribute from atttributes that best classifies examples
+    Let A the attribute from __attributes__ that best classifies examples
 
     Create a Root decision node which attribute is A
 
-    For each possible value, vi, of A,
+    For each possible value vi of A
 
-        Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of examples that have value vi for A(partition)
+        Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of __examples__ that have value vi for A(partition)
 
         If examples is empty
 
-            then below this nodde add a new branch with leaf node with label = most common value of the targetattribute in examples
+            then below this node add a new branch with leaf node with label = most common value of the targetattribute in examples
 
             else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
             
-     Return the  Root decision node
+     Return the Root decision node
 
 ID3's philosophy is that shorter trees are preferred on longer trees, and which places relevant information close to the root are preferred over, therefore the algorithm always tries to put the attributes that have the greatest correlation with the target attribute at the top.
 
