@@ -70,8 +70,9 @@ We begin by defining a measure commonly used in information theory, called entro
 
 Entropy is defined as the __expected value of information__.
 
-Claude Shannon is considered one of the most intelligent people of the twentieth century.
-It was said of Claude Shannon:“There were many at Bell Labs and MIT who compared Shannon's intuition to that of Einstein. Others found that comparison unfair, unfair to Shannon”... 
+_Claude Shannon is considered one of the most intelligent people of the twentieth century.
+It was said of Claude Shannon:“There were many at Bell Labs and MIT who compared Shannon's intuition to that of Einstein. Others found that comparison unfair, unfair to Shannon”..._
+
 In ML context Entropy is the expected value of the information __relating to the classes__. 
 
 For n classes of data 
