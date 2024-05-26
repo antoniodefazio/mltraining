@@ -40,19 +40,19 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
      __targetattribute__ in __examples__
 
 
-    Let A the attribute from __attributes__ that best classifies examples
+    Let A the attribute from __attributes__ that best classifies __examples__
 
     Create a Root decision node which attribute is A
 
     For each possible value vi of A
 
-        Add to this node a new tree branch corresponding to the test A = vi. So let examples be the subset of __examples__ that have value vi for A(partition)
+        Add to this node a new tree branch corresponding to the test A = vi. So let __examplesBest__ be the subset of __examples__ that have value vi for A(partition)
 
-        If examples is empty
+        If __examplesBest__ is empty
 
-            then below this node add a new branch with leaf node with label = most common value of the targetattribute in examples
+            then below this node add a new branch with leaf node with label = most common value of the targetattribute in __examples__
 
-            else below this node add new branch with subtree ID3(examples, targetattribute, attributes – (A)))
+            else below this node add new branch with subtree ID3(__examplesBest__, targetattribute, attributes – (A)))
             
      Return the Root decision node
 
