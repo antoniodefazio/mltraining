@@ -92,7 +92,7 @@ this attribute. More precisely, the information gain, Gain(S, A) of an attribute
 
 _Gain(S,A) = E(S) – E(S | A)_
 
-where E(S) is the above entropy before split, while E(S|A) is the entropy given A, means the entropy after splitting based on A.
+where E(S) is the above entropy before split, while E(S|A) is the entropy given A, means the entropy after splitting based on A. The best attribute is the one with maximum gain and, notice, E(S) does not affect the max gain.
 
 Fill Java code for Entropy and Infomration Gain at https://github.com/antoniodefazio/mltraining/blob/master/src/mltraining/algorithms/ID3.java
 
