@@ -38,7 +38,7 @@ public class ID3 extends AbstractBestAttribute {
 
 	@Override
 	public String chooseBestAttribute(List<Map<String, String>> data, List<String> attributes, String targetAttribute) {
-		final double baseEntropy = calculateShannonEntropy(data, targetAttribute);
+		final double baseEntropy = calculateShannonEntropy(data, targetAttribute); // it does not affect the result
 		LOGGER.info(String.format(" Base Entropy H(S) of attribute  %s=%s ", targetAttribute, baseEntropy));
 		double bestGain = Double.MIN_VALUE;
 		String bestAttribute = null;
