@@ -19,7 +19,7 @@ public class MLDecisionTreeImpl implements MLDecisionTreeInt {
 
 	private final PartitionerInt partitionerInt;
 
-	private final String INDENTATOR = "|__ ";
+	private final String INDENTATOR = "----";
 
 	public MLDecisionTreeImpl(BestAttributeFunction bestAttributeFunction, PartitionerInt partitionerInt) {
 		this.bestAttributeFunction = bestAttributeFunction;
@@ -161,10 +161,10 @@ public class MLDecisionTreeImpl implements MLDecisionTreeInt {
 			sb.append(prefix).append(INDENTATOR).append("Attribute: ").append(node.getAttribute()).append("\n");
 
 			for (final Map.Entry<String, MLDecisionNode> entry : node.getChildren().entrySet()) {
-				sb.append(prefix).append("    ").append(INDENTATOR).append("Value: ").append(entry.getKey())
+				sb.append(prefix).append("---|").append(INDENTATOR).append("Value: ").append(entry.getKey())
 						.append("\n");
 
-				toString(sb, entry.getValue(), prefix + "    ");
+				toString(sb, entry.getValue(), prefix + "---|");
 			}
 		}
 	}

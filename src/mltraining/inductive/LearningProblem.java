@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import mltraining.algorithms.BestAttributeFunction;
 import mltraining.algorithms.ID3;
@@ -20,6 +22,8 @@ import mltraining.domain.datastructures.Outlook;
 import mltraining.utility.MLPrinter;
 
 public class LearningProblem {
+
+	private final static Set<String> literalsAttributes = new HashSet<>();
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		final Boolean[][] boolTrainingData = { { false, false, false, false, false },
@@ -177,9 +181,14 @@ public class LearningProblem {
 	private static final String valueInRange(String attribute, String value) {
 		Double doubleVal = null;
 		try {
-			doubleVal = Double.parseDouble(value);
+			if (!literalsAttributes.contains(attribute)) {
+				doubleVal = Double.parseDouble(value);
+			} else {
+				return value;
+			}
 		} catch (final NumberFormatException nfe) {
-			// not a double
+			literalsAttributes.add(attribute);
+			return value;
 		}
 		if ("int.rate".equals(attribute)) {
 			doubleVal *= 100;
