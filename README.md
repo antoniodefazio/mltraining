@@ -16,11 +16,13 @@ The tree is therefore based on existing data, so built by training from the data
 _(Outlook = Sunny, Temperature = Hot, Humidity = High, Wind = Strong)_
  would be classified as a negative instance (i.e., the tree predicts that PlayTennis = no).
 This decision tree, since the range of the target attribute is binary (Yes or No), it can alternatively be represented by the following boolean expression
+
 _Outlook = Sunny AND Humidity = Normal OR Outlook = Overcast OR Outlook = Rain  AND Wind = Weak_
+
 
 ### In general, how to build the tree starting from the training data?
 
-We will use the ID3 algorithm first by making a discursive description of it, then pseudocode and finally in Java.
+We will use the ID3 algorithm first by making a discursive description of it, then pseudocode and finally in Java. This is the wiki link https://en.wikipedia.org/wiki/ID3_algorithm. 
  
 The most important part of the algorithm is to establish on a statistical basis which is the __best attribute__ to use as the root of the tree, for obvious reasons, later a descendant of the root node is then created for each possible value of this attribute, and so on recursively, so the entire process is then repeated using the training examples associated with each descendant node to select the best attribute to test at that point in the tree.
 
@@ -40,19 +42,19 @@ Here is my starting point, the pseudcode function, with 3 parameters, to generat
      __targetattribute__ in __examples__
 
 
-    Let A the attribute from __attributes__ that best classifies __examples__
+    Let B the attribute from __attributes__ that best classifies __examples__
 
-    Create a Root decision node which attribute is A
+    Create a Root decision node which attribute is B
 
-    For each possible value vi of A
+    For each possible value vi of B
 
-        Add to this node a new tree branch corresponding to the test A = vi. So let __examplesBest__ be the subset of __examples__ that have value vi for A(partition)
+        Add to this node a new tree branch corresponding to the test B = vi. So let __examplesBest__ be the subset of __examples__ that have value vi for B(partition)
 
         If __examplesBest__ is empty
 
             then below this node add a new branch with leaf node with label = most common value of the targetattribute in __examples__
 
-            else below this node add new branch with subtree ID3(__examplesBest__, targetattribute, attributes – (A)))
+            else below this node add new branch with subtree ID3(__examplesBest__, targetattribute, attributes – (B)))
             
      Return the Root decision node
 
@@ -63,13 +65,15 @@ ID3's philosophy is that shorter trees are preferred on longer trees, and which 
 ### Which Attribute Is the Best Classifier?
 
 The best attribute as root is obviously the one that has the greatest impact, therefore high correlation, with the target attribute, so it is the best __"separator"__(during split) of training data. What is a good quantitative measure of the worth of an attribute? A statistical property, called __information gain__, that measures how well a given attribute separates the training examples according to their target classification. ID3 uses this information gain measure to select among the candidate attributes at each step while growing the tree.
-So in order to better understand how to establish the best attribute during split we have to understand the concepts of information gain and __entropy__ precisely. 
-We begin by defining a measure commonly used in information theory, called entropy,its name comes from one of the fathers of information theory, Claude Shannon. I had studied this formula at University for the "Theory of Waves" exam. Legend has it that the terms information gain and entropy are purposely designed to cause confusion! In fact it was John von Neumann suggested that Shannon use the term entropy because people wouldn't know what it meant.
+So in order to better understand how to establish the best attribute during split we have to understand the concepts of information gain and __entropy__ precisely. We in fact begin by defining a measure commonly used in information theory, called entropy, its name comes from one of the fathers of information theory, Claude Shannon. I had studied this formula at University for the "Theory of Waves" exam. 
+
+_Legend has it that the terms information gain and entropy are purposely designed to cause confusion! In fact it was John von Neumann suggested that Shannon use the term entropy because people wouldn't know what it meant. Claude Shannon is considered one of the most intelligent people of the twentieth century.
+It was said of Claude Shannon:“There were many at Bell Labs and MIT who compared Shannon's intuition to that of Einstein. Others found that comparison unfair, unfair to Shannon”..._
 
 Entropy is defined as the __expected value of information__.
 
-Claude Shannon is considered one of the most intelligent people of the twentieth century.
-It was said of Claude Shannon:“There were many at Bell Labs and MIT who compared Shannon's intuition to that of Einstein. Others found that comparison unfair, unfair to Shannon”... 
+
+
 In ML context Entropy is the expected value of the information __relating to the classes__. 
 
 For n classes of data 
