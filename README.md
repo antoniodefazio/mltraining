@@ -1,4 +1,4 @@
-# How to create from scratch a Machine Learning Decisional Tree in Java from training data. Concrete example of bank loan payment forecast
+# How to create from scratch a Machine Learning Decision Tree in Java from training data. Concrete example of bank loan payment forecast
 
 ### Decision Tree Representation
 
